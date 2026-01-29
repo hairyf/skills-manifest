@@ -27,6 +27,9 @@ catalogs:
     simple-git-hooks:
       specifier: ^2.13.1
       version: 2.13.1
+    skills:
+      specifier: ^1.2.0
+      version: 1.2.0
     tsdown:
       specifier: ^0.17.3
       version: 0.17.4
@@ -92,6 +95,12 @@ importers:
       simple-git-hooks:
         specifier: catalog:cli
         version: 2.13.1
+      skills:
+        specifier: catalog:cli
+        version: 1.2.0
+      skills-manifest:
+        specifier: workspace:*
+        version: 'link:'
       tinyexec:
         specifier: catalog:testing
         version: 1.0.2
@@ -2093,6 +2102,11 @@ packages:
 
   sisteransi@1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
+
+  skills@1.2.0:
+    resolution: {integrity: sha512-MQnoEQj2GdTKUCWWVRjdK3C4aI9i7I8rxmyXOsJpnsgXhnrueq6hH3nkwbgDedYW+58Z9aUrw3HDE+oEMXAZdQ==}
+    engines: {node: '>=18'}
+    hasBin: true
 
   slice-ansi@7.1.2:
     resolution: {integrity: sha512-iOBWFgUX7caIZiuutICxVgX1SdxwAVFFKwt1EvMYYec/NWO5meOJ6K5uQxhrYBdQJne4KxiqZc+KptFOWFSI9w==}
@@ -4465,6 +4479,8 @@ snapshots:
   simple-git-hooks@2.13.1: {}
 
   sisteransi@1.0.5: {}
+
+  skills@1.2.0: {}
 
   slice-ansi@7.1.2:
     dependencies:

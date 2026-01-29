@@ -1,5 +1,5 @@
 {
-  "name": "pkg-placeholder",
+  "name": "skills-manifest",
   "type": "module",
   "version": "0.0.0",
   "packageManager": "pnpm@10.25.0",
@@ -7,12 +7,12 @@
   "author": "Hairyf <wwu710632@gmail.com>",
   "license": "MIT",
   "funding": "https://github.com/sponsors/hairyf",
-  "homepage": "https://github.com/hairyf/pkg-placeholder#readme",
+  "homepage": "https://github.com/hairyf/skills-manifest#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hairyf/pkg-placeholder.git"
+    "url": "git+https://github.com/hairyf/skills-manifest.git"
   },
-  "bugs": "https://github.com/hairyf/pkg-placeholder/issues",
+  "bugs": "https://github.com/hairyf/skills-manifest/issues",
   "keywords": [],
   "sideEffects": false,
   "main": "./src/index.ts",
@@ -27,9 +27,9 @@
     "main": "./dist/index.mjs",
     "module": "./dist/index.mjs",
     "types": "./dist/index.d.ts",
-    "bin": { "pkg-placeholder": "./bin/index.mjs" }
+    "bin": { "skills-manifest": "./bin/index.mjs" }
   },
-  "bin": { "pkg-placeholder": "./bin/index.dev.mjs" },
+  "bin": { "skills-manifest": "./bin/index.dev.mjs" },
   "files": ["bin", "dist"],
   "scripts": {
     "build": "tsdown",
@@ -42,6 +42,9 @@
     "typecheck": "tsc",
     "prepare": "simple-git-hooks"
   },
+  "peerDependencies": {
+    "skills": "catalog:cli"
+  },
   "dependencies": {},
   "devDependencies": {
     "@antfu/eslint-config": "catalog:cli",
@@ -53,6 +56,8 @@
     "lint-staged": "catalog:cli",
     "publint": "catalog:cli",
     "simple-git-hooks": "catalog:cli",
+    "skills": "catalog:cli",
+    "skills-manifest": "workspace:*",
     "tinyexec": "catalog:testing",
     "tsdown": "catalog:cli",
     "tsx": "catalog:cli",
