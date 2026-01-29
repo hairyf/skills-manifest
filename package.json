@@ -1,0 +1,71 @@
+{
+  "name": "pkg-placeholder",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@10.25.0",
+  "description": "_description_",
+  "author": "Hairyf <wwu710632@gmail.com>",
+  "license": "MIT",
+  "funding": "https://github.com/sponsors/hairyf",
+  "homepage": "https://github.com/hairyf/pkg-placeholder#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hairyf/pkg-placeholder.git"
+  },
+  "bugs": "https://github.com/hairyf/pkg-placeholder/issues",
+  "keywords": [],
+  "sideEffects": false,
+  "main": "./src/index.ts",
+  "publishConfig": {
+    "exports": {
+      ".": {
+        "types": "./dist/index.d.ts",
+        "import": "./dist/index.mjs"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./dist/index.mjs",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "bin": { "pkg-placeholder": "./bin/index.mjs" }
+  },
+  "bin": { "pkg-placeholder": "./bin/index.dev.mjs" },
+  "files": ["bin", "dist"],
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "lint": "eslint",
+    "prepublishOnly": "nr build",
+    "release": "bumpp",
+    "start": "tsx src/index.ts",
+    "test": "vitest",
+    "typecheck": "tsc",
+    "prepare": "simple-git-hooks"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@antfu/eslint-config": "catalog:cli",
+    "@antfu/ni": "catalog:cli",
+    "@antfu/utils": "catalog:inlined",
+    "@types/node": "catalog:types",
+    "bumpp": "catalog:cli",
+    "eslint": "catalog:cli",
+    "lint-staged": "catalog:cli",
+    "publint": "catalog:cli",
+    "simple-git-hooks": "catalog:cli",
+    "tinyexec": "catalog:testing",
+    "tsdown": "catalog:cli",
+    "tsx": "catalog:cli",
+    "typescript": "catalog:cli",
+    "vite": "catalog:cli",
+    "vitest": "catalog:testing",
+    "vitest-package-exports": "catalog:testing",
+    "yaml": "catalog:testing"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm i --frozen-lockfile --ignore-scripts --offline && npx lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}
