@@ -6,7 +6,37 @@
 [![JSDocs][jsdocs-src]][jsdocs-href]
 [![License][license-src]][license-href]
 
-_description_
+**skills-manifest.json**:
+
+```json
+{
+  "agents": ["cursor", "claude"],
+  "skills": {
+    "vercel-labs/agent-skills": {
+      "vercel-react-best-practices": true
+    },
+    "https://github.com/vercel-labs": {
+      "find-skills": true
+    }
+  }
+}
+```
+
+.gitignore:
+
+```
+skills/*
+```
+
+package.json:
+
+```json
+{
+  "scripts": {
+    "prepare": "skills-manifest install"
+  }
+}
+```
 
 ## Note for Developers
 

@@ -5,5 +5,4 @@ function run(): void {
   // For example, you can use yargs or commander to parse command-line arguments
   // and execute the appropriate functions based on the input.
 }
-
 run()
