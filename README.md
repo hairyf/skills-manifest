@@ -6,7 +6,17 @@
 [![JSDocs][jsdocs-src]][jsdocs-href]
 [![License][license-src]][license-href]
 
-**skills-manifest.json**:
+## Install
+
+```bash
+pnpm add skills skills-manifest -D
+```
+
+> The `skills add <args>` will not automatically update the `skills-manifest.json` file. Currently, [skills](https://github.com/vercel-labs/skills) does not support project-level.lock file. This project is only intended as temporary solution for sharing skills during collaborative work.
+
+## Config
+
+`skills-manifest.json`:
 
 ```json
 {
@@ -22,10 +32,10 @@
 }
 ```
 
-.gitignore:
+`.gitignore`:
 
 ```
-skills/*
+skills
 ```
 
 package.json:
@@ -37,22 +47,6 @@ package.json:
   }
 }
 ```
-
-## Note for Developers
-
-This starter recommands using [npm Trusted Publisher](https://github.com/e18e/ecosystem-issues/issues/201), where the release is done on CI to ensure the security of the packages.
-
-To do so, you need to run `pnpm publish` manually for the very first time to create the package on npm, and then go to `https://www.npmjs.com/package/<your-package-name>/access` to set the connection to your GitHub repo.
-
-Then for the future releases, you can run `pnpm run release` to do the release and the GitHub Actions will take care of the release process.
-
-## Sponsors
-
-<p align="center">
-  <a href="https://cdn.jsdelivr.net/gh/antfu/static/sponsors.svg">
-    <img src='https://cdn.jsdelivr.net/gh/antfu/static/sponsors.svg'/>
-  </a>
-</p>
 
 ## License
 

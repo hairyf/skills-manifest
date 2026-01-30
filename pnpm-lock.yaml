@@ -15,6 +15,12 @@ catalogs:
     bumpp:
       specifier: ^10.3.2
       version: 10.4.0
+    c12:
+      specifier: ^3.3.3
+      version: 3.3.3
+    citty:
+      specifier: ^0.2.0
+      version: 0.2.0
     eslint:
       specifier: ^9.39.2
       version: 9.39.2
@@ -67,6 +73,16 @@ catalogs:
 importers:
 
   .:
+    dependencies:
+      c12:
+        specifier: catalog:cli
+        version: 3.3.3
+      citty:
+        specifier: catalog:cli
+        version: 0.2.0
+      tinyexec:
+        specifier: catalog:testing
+        version: 1.0.2
     devDependencies:
       '@antfu/eslint-config':
         specifier: catalog:cli
@@ -101,9 +117,6 @@ importers:
       skills-manifest:
         specifier: workspace:*
         version: 'link:'
-      tinyexec:
-        specifier: catalog:testing
-        version: 1.0.2
       tsdown:
         specifier: catalog:cli
         version: 0.17.4(publint@0.3.16)(synckit@0.11.12)(typescript@5.9.3)

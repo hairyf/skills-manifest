@@ -1,11 +1,11 @@
 import { defineConfig } from 'tsdown'
-import { dependencies } from './package.json'
+import pkg from './package.json' with { type: 'json' }
 
 export default defineConfig({
+  external: Object.keys(pkg.dependencies || {}),
   fixedExtension: true,
   entry: ['src/**/*.ts'],
   format: ['esm'],
   clean: true,
   dts: true,
-  external: Object.keys(dependencies || {}),
 })

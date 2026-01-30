@@ -27,10 +27,17 @@
     "main": "./dist/index.mjs",
     "module": "./dist/index.mjs",
     "types": "./dist/index.d.ts",
-    "bin": { "skills-manifest": "./bin/index.mjs" }
+    "bin": {
+      "skills-manifest": "./bin/index.mjs"
+    }
   },
-  "bin": { "skills-manifest": "./bin/index.dev.mjs" },
-  "files": ["bin", "dist"],
+  "bin": {
+    "skills-manifest": "./bin/index.dev.mjs"
+  },
+  "files": [
+    "bin",
+    "dist"
+  ],
   "scripts": {
     "build": "tsdown",
     "dev": "tsdown --watch",
@@ -45,7 +52,11 @@
   "peerDependencies": {
     "skills": "catalog:cli"
   },
-  "dependencies": {},
+  "dependencies": {
+    "c12": "catalog:cli",
+    "citty": "catalog:cli",
+    "tinyexec": "catalog:testing"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "catalog:cli",
     "@antfu/ni": "catalog:cli",
@@ -58,7 +69,6 @@
     "simple-git-hooks": "catalog:cli",
     "skills": "catalog:cli",
     "skills-manifest": "workspace:*",
-    "tinyexec": "catalog:testing",
     "tsdown": "catalog:cli",
     "tsx": "catalog:cli",
     "typescript": "catalog:cli",

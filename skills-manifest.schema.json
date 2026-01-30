@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "SkillsManifest",
+  "description": "Skills manifest configuration",
+  "required": ["skills", "agents"],
+  "properties": {
+    "skills": {
+      "type": "object",
+      "description": "Skills configuration by repository",
+      "additionalProperties": {
+        "oneOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "object",
+            "additionalProperties": {
+              "type": "boolean"
+            }
+          }
+        ]
+      }
+    },
+    "agents": {
+      "type": "array",
+      "description": "List of agents",
+      "items": {
+        "type": "string",
+        "enum": [
+          "amp",
+          "antigravity",
+          "claude-code",
+          "moltbot",
+          "cline",
+          "codebuddy",
+          "codex",
+          "command-code",
+          "continue",
+          "crush",
+          "cursor",
+          "droid",
+          "gemini-cli",
+          "github-copilot",
+          "goose",
+          "junie",
+          "kilo",
+          "kimi-cli",
+          "kiro-cli",
+          "kode",
+          "mcpjam",
+          "mux",
+          "opencode",
+          "openhands",
+          "pi",
+          "qoder",
+          "qwen-code",
+          "roo",
+          "trae",
+          "windsurf",
+          "zencoder",
+          "neovate",
+          "pochi"
+        ]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    }
+  },
+  "additionalProperties": false
+}
