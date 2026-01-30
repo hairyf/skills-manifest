@@ -14,14 +14,21 @@ const main = defineCommand({
     const { config } = await loadConfig<SkillsManifest>({
       configFile: 'skills-manifest',
     })
-
-    for (const repo of Object.keys(config.skills)) {
+    const repos = Object.keys(config.skills)
+    for (const repo of repos) {
       if (typeof config.skills[repo] === 'boolean') {
-        await x('skills', ['add', repo, '--agent', ...config.agents, '--all', '--yes'])
+        const args = ['add', repo, '--agent', ...config.agents, '--all', '--yes']
+        await x('skills', args, { nodeOptions: { stdio: 'inherit' } })
         continue
       }
-      for (const skill of Object.keys(config.skills[repo]))
-        await x('skills', ['add', repo, '--skill', skill, '--agent', ...config.agents, '--yes'])
+
+      const skills: string[] = Array.isArray(config.skills[repo])
+        ? config.skills[repo]
+        // @ts-expect-error - allow object with boolean values
+        : Object.keys(config.skills[repo]).filter(skill => config.skills[repo][skill] === true)
+
+      const args = ['add', repo, '--skill', ...skills, '--agent', ...config.agents, '--yes']
+      await x('skills', args, { nodeOptions: { stdio: 'inherit' } })
     }
   },
 })

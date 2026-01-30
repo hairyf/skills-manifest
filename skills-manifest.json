@@ -2,7 +2,9 @@
   "$schema": "https://raw.githubusercontent.com/hairyf/skills-manifest/main/skills-manifest.schema.json",
   "agents": ["cursor", "claude-code"],
   "skills": {
+    "vercel-labs/skills": ["find-skills"],
     "vercel-labs/agent-skills": {
+      "vercel-composition-patterns": true,
       "vercel-react-best-practices": true
     }
   }

@@ -18,6 +18,12 @@
             "additionalProperties": {
               "type": "boolean"
             }
+          },
+          {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         ]
       }
