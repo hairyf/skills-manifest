@@ -58,6 +58,16 @@ skills
 }
 ```
 
+## AGENTS.md for AI Agents
+
+After you have configured `skills-manifest.json` and run `skills-manifest install` to generate the skills tree, we recommend using [OpenSkills](https://github.com/numman-ali/openskills) to produce an `AGENTS.md` that AI agents can consume:
+
+```bash
+npx openskills sync
+```
+
+This keeps your installed skills in sync with an `AGENTS.md` (or custom output path) so agents that read it (e.g. Claude Code, Cursor, Windsurf) can discover and use the same skills. See [OpenSkills](https://github.com/numman-ali/openskills) for options such as `--universal` and `-o <path>`.
+
 ## License
 
 [MIT](./LICENSE) License © [Hairyf](https://github.com/hairyf)

@@ -9,7 +9,7 @@ import { x } from 'tinyexec'
 import pkg from '../../package.json' with { type: 'json' }
 
 const DEFAULT_MANIFEST: SkillsManifest = {
-  agents: ['cursor'],
+  agents: ['cursor', 'claude-code'],
   skills: {},
 }
 
