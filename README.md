@@ -30,9 +30,8 @@ pnpm add skills skills-manifest -D
     "vercel-labs/agent-skills": {
       "vercel-react-best-practices": true
     },
-    "https://github.com/vercel-labs": {
-      "find-skills": true
-    }
+    // or array of skills
+    "https://github.com/vercel-labs": ["find-skills"]
   }
 }
 ```
