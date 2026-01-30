@@ -6,13 +6,17 @@
 [![JSDocs][jsdocs-src]][jsdocs-href]
 [![License][license-src]][license-href]
 
+A lightweight manifest manager for [skills](https://github.com/vercel-labs/skills), enabling project-level skill synchronization and collaborative configuration.
+
+> [!IMPORTANT]
+> The `skills add <args>` command will not automatically update the `skills-manifest.json` file.
+> Since [skills](https://github.com/vercel-labs/skills) does not currently support project-level lock files, this project serves as a temporary solution for sharing and persisting skills across collaborative environments.
+
 ## Install
 
 ```bash
 pnpm add skills skills-manifest -D
 ```
-
-> The `skills add <args>` will not automatically update the `skills-manifest.json` file. Currently, [skills](https://github.com/vercel-labs/skills) does not support project-level.lock file. This project is only intended as temporary solution for sharing skills during collaborative work.
 
 ## Config
 
@@ -38,7 +42,7 @@ pnpm add skills skills-manifest -D
 skills
 ```
 
-package.json:
+`package.json`:
 
 ```json
 {

@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.0",
   "packageManager": "pnpm@10.25.0",
-  "description": "_description_",
+  "description": "A lightweight manifest manager for skills, enabling project-level skill synchronization and collaborative configuration.",
   "author": "Hairyf <wwu710632@gmail.com>",
   "license": "MIT",
   "funding": "https://github.com/sponsors/hairyf",
