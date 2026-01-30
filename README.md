@@ -24,7 +24,8 @@ pnpm add skills skills-manifest -D
 
 ```json
 {
-  "agents": ["cursor", "claude"],
+  "$schema": "https://raw.githubusercontent.com/hairyf/skills-manifest/main/skills-manifest.schema.json",
+  "agents": ["cursor", "claude-code"],
   "skills": {
     "vercel-labs/agent-skills": {
       "vercel-react-best-practices": true

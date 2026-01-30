@@ -13,7 +13,15 @@
     "url": "git+https://github.com/hairyf/skills-manifest.git"
   },
   "bugs": "https://github.com/hairyf/skills-manifest/issues",
-  "keywords": [],
+  "keywords": [
+    "skills",
+    ".skills",
+    "lock",
+    "manifest",
+    "skills-manifest",
+    "skills-manifest.json",
+    "skills-manifest.schema.json"
+  ],
   "sideEffects": false,
   "main": "./src/index.ts",
   "publishConfig": {
