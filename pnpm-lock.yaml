@@ -27,6 +27,9 @@ catalogs:
     lint-staged:
       specifier: ^16.2.7
       version: 16.2.7
+    nypm:
+      specifier: ^0.6.4
+      version: 0.6.4
     publint:
       specifier: ^0.3.16
       version: 0.3.16
@@ -80,6 +83,9 @@ importers:
       citty:
         specifier: catalog:cli
         version: 0.2.0
+      nypm:
+        specifier: catalog:cli
+        version: 0.6.4
       tinyexec:
         specifier: catalog:testing
         version: 1.0.2

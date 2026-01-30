@@ -63,6 +63,7 @@
   "dependencies": {
     "c12": "catalog:cli",
     "citty": "catalog:cli",
+    "nypm": "catalog:cli",
     "tinyexec": "catalog:testing"
   },
   "devDependencies": {
