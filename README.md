@@ -15,12 +15,6 @@ A lightweight manifest manager for [skills](https://github.com/vercel-labs/skill
 ## Install
 
 ```bash
-npx skills-manifest init
-```
-
-Or manually install:
-
-```bash
 pnpm add skills skills-manifest -D
 ```
 
