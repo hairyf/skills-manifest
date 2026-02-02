@@ -44,7 +44,8 @@
   },
   "files": [
     "bin",
-    "dist"
+    "dist",
+    "patches"
   ],
   "scripts": {
     "build": "tsdown",
@@ -55,7 +56,7 @@
     "start": "tsx src/index.ts",
     "test": "vitest",
     "typecheck": "tsc",
-    "prepare": "simple-git-hooks"
+    "prepare": "simple-git-hooks && skills-manifest install"
   },
   "peerDependencies": {
     "skills": "catalog:cli"

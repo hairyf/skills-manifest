@@ -9,16 +9,45 @@
 A lightweight manifest manager for [skills](https://github.com/vercel-labs/skills), enabling project-level skill synchronization and collaborative configuration.
 
 > [!IMPORTANT]
-> The `skills add <args>` command will not automatically update the `skills-manifest.json` file.
-> Since [skills](https://github.com/vercel-labs/skills) does not currently support project-level lock files, this project serves as a temporary solution for sharing and persisting skills across collaborative environments.
+> ~~The `skills add <args>` command will not automatically update the `skills-manifest.json` file.~~
+> ~~Since [skills](https://github.com/vercel-labs/skills) does not currently support project-level lock files, this project serves as a temporary solution for sharing and persisting skills across collaborative environments.~~
 
-## Install
+## Init & sync with skills
+
+Run once in your project:
 
 ```bash
 npx skills-manifest init
 ```
 
-Or manually install:
+This will:
+
+- Install `skills` and `skills-manifest` as dev dependencies
+- Create `skills-manifest.json` and add a `prepare` script that runs `skills-manifest install`
+- Add `skills` to `.gitignore`
+
+Then run:
+
+```bash
+skills-manifest install
+```
+
+`install` syncs skills from the manifest and **injects a wrapper** into `node_modules/skills` so that:
+
+| When you run | skills-manifest also runs |
+|--------------|---------------------------|
+| `skills add <repo> [--skill ...]` | `skills-manifest add <repo> [...]` — the repo and skills are written to `skills-manifest.json` |
+| `skills remove <skills...>` | `skills-manifest remove` for each repo that had those skills |
+
+To add a skill **without** updating the manifest (e.g. one-off try), use:
+
+```bash
+skills add <repo> --skip-manifest
+```
+
+## Install (manual)
+
+Alternatively, install without `init`:
 
 ```bash
 pnpm add skills skills-manifest -D
