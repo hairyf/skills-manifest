@@ -12,6 +12,8 @@ A lightweight manifest manager for [skills](https://github.com/vercel-labs/skill
 > ~~The `skills add <args>` command will not automatically update the `skills-manifest.json` file.~~
 > ~~Since [skills](https://github.com/vercel-labs/skills) does not currently support project-level lock files, this project serves as a temporary solution for sharing and persisting skills across collaborative environments.~~
 
+> Now you can use `skills add` to add skills to the manifest.
+
 ## Init & sync with skills
 
 Run once in your project:
