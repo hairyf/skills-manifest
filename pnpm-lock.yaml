@@ -37,8 +37,8 @@ catalogs:
       specifier: ^2.13.1
       version: 2.13.1
     skills:
-      specifier: ^1.2.0
-      version: 1.2.0
+      specifier: ^1.3.4
+      version: 1.3.4
     tsdown:
       specifier: ^0.17.3
       version: 0.17.4
@@ -119,7 +119,7 @@ importers:
         version: 2.13.1
       skills:
         specifier: catalog:cli
-        version: 1.2.0
+        version: 1.3.4
       skills-manifest:
         specifier: workspace:*
         version: 'link:'
@@ -2122,8 +2122,8 @@ packages:
   sisteransi@1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
 
-  skills@1.2.0:
-    resolution: {integrity: sha512-MQnoEQj2GdTKUCWWVRjdK3C4aI9i7I8rxmyXOsJpnsgXhnrueq6hH3nkwbgDedYW+58Z9aUrw3HDE+oEMXAZdQ==}
+  skills@1.3.4:
+    resolution: {integrity: sha512-0FVx8BJ9eTTBNEA2q/fyc5Q3l+inu3x0OS9Vnj7KnC4UzlBIMcm6PsagF9AkCtJZItFkwDTbCdWsa6NBfj8RQg==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -4499,7 +4499,7 @@ snapshots:
 
   sisteransi@1.0.5: {}
 
-  skills@1.2.0: {}
+  skills@1.3.4: {}
 
   slice-ansi@7.1.2:
     dependencies:
