@@ -34,8 +34,13 @@ export const init = defineCommand({
     // 3. 更新 .gitignore (简化去重逻辑)
     const gitignorePath = path.join(cwd, '.gitignore')
     const gitignore = await fs.readFile(gitignorePath, 'utf-8').catch(() => '')
-    if (!gitignore.split('\n').includes('skills'))
-      await fs.appendFile(gitignorePath, gitignore.endsWith('\n') ? 'skills\n' : '\nskills\n')
+    if (!gitignore.split('\n').includes('skills')) {
+      await fs.appendFile(gitignorePath, [
+        '**/skills',
+        '!/skills',
+        '!/skills/**',
+      ].join('\n'))
+    }
 
     // 4. 更新 package.json (链式操作)
     const pkgPath = path.join(cwd, 'package.json')
